@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verde Eterno</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div id="login-screen">
+      <h1>Verde Eterno</h1> 
+      <input id="username-input" placeholder="Ingresa tu nombre..." />
+      <button onclick="iniciarSesion()">Entrar</button>
+    </div>
+    <div id="app-content" style="display: none;">
+      <h2 id="saludo"></h2>
+      <input id="search" placeholder="Buscar planta o síntoma..." />
+      <button onclick="buscarPorSintoma()">Buscar</button>
+      <button onclick="filterByType('all')">Todas</button>
+      <button onclick="filterByType('medicinal')">Medicinal</button>
+      <button onclick="filterByType('ritual')">Ritual</button>
+      <button onclick="filterByType('espiritual')">Espiritual</button>
+      <button onclick="filterByType('ancestral')">Ancestral</button>
+      <button onclick="filterByType('energético')">Energético</button>
+      <button onclick="cerrarSesion()" style="background:#d32f2f;">Cerrar sesión</button>
+      <div id="plant-list"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
